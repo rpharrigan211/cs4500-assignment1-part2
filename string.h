@@ -10,8 +10,16 @@ class String : public Object {
     public:
         // input cannot be null
         String(const char* strInput) {}
-
-        virtual ~String() {}
+        
+        /**
+         * Copies a String copying the value from s
+         */
+        String(String* const s) {}
+        
+        /**
+         * Clears string from memory
+         */
+        ~String() {}
 
         /**
     	 * Returns this String appended by otherStr
@@ -21,17 +29,12 @@ class String : public Object {
         String* concat(String *other) {}
 
         /**
-	 * Returns the size of this String
-         */
-        size_t size() {}
-
-        /**
          * Compare each character of this String to the other String
          * Return 0 if equal, > 0 if this String has the first greater char,
          * < otherwise
          * @param other String pointer
         */
-        virtual int compare(String *other) {}
+        int compare(String *other) {}
 
         /**
 	 * Returns the size of this String not including null terminator
@@ -53,9 +56,4 @@ class String : public Object {
          * Overrides hashCode() from Object 
         */
         size_t hashCode() {}
-
-        /**
-	 * Returns copy of char* representation of this String
-        */
-        char* strCopy() {}
 };
