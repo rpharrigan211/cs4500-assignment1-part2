@@ -8,7 +8,7 @@
 
 // Using test functions from warmup 3
 void FAIL() {
-    printf("tests failed (expected since nothing is implemented)");
+    printf("Some tests failed");
     exit(1);
 }
 void OK(const char* m) { printf(m); }
