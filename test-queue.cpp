@@ -29,9 +29,9 @@ int main(int argc, char** argv) {
     t_false(str1->equals(a)); //str1 and a are not equal
     t_false(str1->equals(str2)); //str1 and str2 are not equal
     
-    t_true(str1->compare(str2) < 0); //str1 has a lower first diff char than str2
-    t_true(str2->compare(str1) > 0); //str2 has a higher first diff char than str1
-    t_true(str1->compare(str3) == 0); //str1 and str3 are equal
+    t_true(str1->cmp(str2) < 0); //str1 has a lower first diff char than str2
+    t_true(str2->cmp(str1) > 0); //str2 has a higher first diff char than str1
+    t_true(str1->cmp(str3) == 0); //str1 and str3 are equal
     
     t_true(str1->size() == 1); //str1 is size 1, not counting null terminator
     
@@ -62,11 +62,18 @@ int main(int argc, char** argv) {
     t_false(queue1->equals(queue2)); //Object Queue and String Queue are not
     //equal despite equal size
     t_true(queue2->equals(queue3)); //both String Queues are equal
+    t_true(queue2->hashCode() == queue3->hashCode()) //equal hash codes
 
     queue2->add(str2); //adds str2 to queue2
     queue2->remove(); //removes the head from queue2 (str1)
     
     t_false(queue2->equals(queue3)); //String Queues are no longer equal
+    
+    Queue* queue4 = new Queue();
+    
+    queue4->add(b); //add b to queue4
+    t_true(queue4->equals(queue1)); //queue4 is equal to queue1
+    t_true(queue4->hashCode() == queue1->hashCode()); //equal hash codes
     
     delete a;
     delete b;
@@ -77,6 +84,7 @@ int main(int argc, char** argv) {
     delete queue1;
     delete queue2;
     delete queue3;
+    delete queue4;
     
     OK("All tests passed!");
 }
