@@ -2,6 +2,7 @@
 
 #pragma once
 #include <stdlib.h>
+#include <iostream>
 
 /*
  * Queue - Stores objects and returns them in FIFO order

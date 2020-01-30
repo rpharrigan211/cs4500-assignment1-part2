@@ -2,6 +2,7 @@
 
 #pragma once
 #include <stdlib.h>
+#include <iostream>
 
 /*
  * Object - Base class for all other classes

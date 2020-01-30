@@ -2,6 +2,7 @@
 
 #pragma once
 #include <stdlib.h>
+#include <iostream>
 
 /*
  * String - Represents a C-style string 

@@ -5,6 +5,7 @@
 #include "queue.h"
 #include "string.h"
 #include <stdio.h>
+#include <iostream>
 
 // Using test functions from warmup 3
 void FAIL() {
@@ -74,6 +75,11 @@ int main(int argc, char** argv) {
     queue4->add(b); //add b to queue4
     t_true(queue4->equals(queue1)); //queue4 is equal to queue1
     t_true(queue4->hashCode() == queue1->hashCode()); //equal hash codes
+    
+    queue4->remove(); //removes remaining element from queue4
+    queue3->remove(); //removes remaining element from queue3
+    t_true(queue4->remove() == nullptr);
+    t_true(queue3->remove() == nullptr);
     
     delete a;
     delete b;
