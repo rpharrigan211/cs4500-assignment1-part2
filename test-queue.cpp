@@ -28,9 +28,6 @@ int main(int argc, char** argv) {
     t_false(str1->equals(a)); //str1 and a are not equal
     t_false(str1->equals(str2)); //str1 and str2 are not equal
     
-    t_true(str1->hashCode() == str3->hashCode()); //str1 & str3 hashes equal
-    t_false(str2->hashCode() == str3->hashCode()); //str2 & str3 hashes not equal
-    
     t_true(str1->compare(str2) < 0); //str1 has a lower first diff char than str2
     t_true(str2->compare(str1) > 0); //str2 has a higher first diff char than str1
     t_true(str1->compare(str3) == 0); //str1 and str3 are equal
@@ -60,7 +57,6 @@ int main(int argc, char** argv) {
     t_true(queue1->size() == queue2->size()); //sizes of both queues are equal
     
     t_false(queue1->equals(queue2)); //queues are not equal despite equal size
-    t_false(queue1->hashCode() == queue2->hashCode()); //no equal hash codes
 
     queue2->remove(); //removes the head from queue2 (str2)
     queue2->add(str1); //adds str1 to queue2

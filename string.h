@@ -58,3 +58,4 @@ class String : public Object {
 	 * Returns copy of char* representation of this String
         */
         char* strCopy() {}
+};
