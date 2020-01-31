@@ -22,7 +22,6 @@ class StringQueue : public Queue {
 
         /*
          * Adds string to end of queue
-         * Exit if str is null
          * @param str String to be added to queue
         */
         void add(String* str) {}

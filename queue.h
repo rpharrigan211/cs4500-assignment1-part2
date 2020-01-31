@@ -15,7 +15,6 @@ class Queue : public Object {
 
         /*
          * Adds object to end of queue
-         * Exit if o is null
          * @param o Object to be added to queue
         */
         virtual void add(Object* o) {}
