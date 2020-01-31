@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
     t_false(queue1->equals(queue2)); //Object Queue and String Queue are not
     //equal despite equal size
     t_true(queue2->equals(queue3)); //both String Queues are equal
-    t_true(queue2->hashCode() == queue3->hashCode()) //equal hash codes
+    t_true(queue2->hashCode() == queue3->hashCode()); //equal hash codes
 
     queue2->add(str2); //adds str2 to queue2
     queue2->remove(); //removes the head from queue2 (str1)
