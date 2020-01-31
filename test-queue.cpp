@@ -74,9 +74,9 @@ int main(int argc, char** argv) {
     
     queue4->remove(); //removes remaining element from queue4
     queue3->remove(); //removes remaining element from queue3
-    t_true(queue4->remove() == nullptr); //removing head from empty queue
-    t_true(queue3->remove() == nullptr); //removing head from empty queue
-    
+    t_true( queue4->size() == 0);
+    t_true( queue4->size() == 0);
+
     delete a;
     delete b;
     delete str1;
