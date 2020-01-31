@@ -4,6 +4,7 @@
 #include "object.h"
 #include "queue.h"
 #include "string.h"
+#include "stringqueue.h"
 #include <stdio.h>
 #include <iostream>
 

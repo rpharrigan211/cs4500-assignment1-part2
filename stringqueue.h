@@ -9,6 +9,9 @@
 
 #pragma once
 #include <stdlib.h>
+#include "queue.h"
+#include "string.h"
+#include "object.h"
 
 /*
  * StringQueue - Stores strings and returns them in FIFO order
