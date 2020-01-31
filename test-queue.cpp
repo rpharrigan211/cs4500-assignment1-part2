@@ -30,10 +30,6 @@ int main(int argc, char** argv) {
     t_false(str1->equals(a)); //str1 and a are not equal
     t_false(str1->equals(str2)); //str1 and str2 are not equal
     
-    t_true(str1->cmp(str2) < 0); //str1 has a lower first diff char than str2
-    t_true(str2->cmp(str1) > 0); //str2 has a higher first diff char than str1
-    t_true(str1->cmp(str3) == 0); //str1 and str3 are equal
-    
     t_true(str1->size() == 1); //str1 is size 1, not counting null terminator
     
     t_true(str1->concat(str2)->equals(str4)); //str2 added to str1 equals str4
