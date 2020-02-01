@@ -4,6 +4,7 @@
 #include "object.h"
 #include "queue.h"
 #include "string.h"
+#include "stringqueue.h"
 #include <stdio.h>
 #include <iostream>
 
@@ -29,10 +30,6 @@ int main(int argc, char** argv) {
     t_true(str1->equals(str3)); //str1 and str3 are equal
     t_false(str1->equals(a)); //str1 and a are not equal
     t_false(str1->equals(str2)); //str1 and str2 are not equal
-    
-    t_true(str1->cmp(str2) < 0); //str1 has a lower first diff char than str2
-    t_true(str2->cmp(str1) > 0); //str2 has a higher first diff char than str1
-    t_true(str1->cmp(str3) == 0); //str1 and str3 are equal
     
     t_true(str1->size() == 1); //str1 is size 1, not counting null terminator
     
@@ -63,7 +60,7 @@ int main(int argc, char** argv) {
     t_false(queue1->equals(queue2)); //Object Queue and String Queue are not
     //equal despite equal size
     t_true(queue2->equals(queue3)); //both String Queues are equal
-    t_true(queue2->hashCode() == queue3->hashCode()) //equal hash codes
+    t_true(queue2->hashCode() == queue3->hashCode()); //equal hash codes
 
     queue2->add(str2); //adds str2 to queue2
     queue2->remove(); //removes the head from queue2 (str1)
@@ -78,9 +75,9 @@ int main(int argc, char** argv) {
     
     queue4->remove(); //removes remaining element from queue4
     queue3->remove(); //removes remaining element from queue3
-    t_true(queue4->remove() == nullptr); //removing head from empty queue
-    t_true(queue3->remove() == nullptr); //removing head from empty queue
-    
+    t_true( queue4->size() == 0);
+    t_true( queue4->size() == 0);
+
     delete a;
     delete b;
     delete str1;
